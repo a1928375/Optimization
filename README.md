@@ -2,7 +2,7 @@
 
 (1) Optimization Phase
 
-(2) Fix It Up:  A fuller answer would replace return tree with return (etype, a, op, b) at the end. The question only asked you to handle a+(5*0), but we would really like to be more general as well.
+(2) Recursive optimization:  A fuller answer would replace return tree with return (etype, a, op, b) at the end. The question only asked you to handle a+(5*0), but we would really like to be more general as well.
 
 (3) Bending Numbers:  In class we discussed a number of arithmetic optimizations for JavaScript. In our approach to optimization, a sub-tree of the abstract syntax is replaced with a new abstract syntax tree. In addition to using arithmetic identities, such as X*0 == 0 for all X, we can also perform arithmetic operations on constants. For example, if a JavaScript loop or recursive procedure containts 1+2+3, we can just evaluate it to 6 once and then not perform the two additions again. This technique is called "constant folding". Write a procedure optimize(exp) that takes a JavaScript expression AST node and returns a new, simplified JavaScript expression AST. You must handle:
 
